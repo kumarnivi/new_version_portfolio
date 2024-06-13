@@ -37,7 +37,8 @@
   white-space: nowrap;
   padding-bottom: 13px;
   color: #ffff;
-  z-index: 1000;
+  z-index: 1;
+
 }
 .twelve h1:before {
   background-color: #930e66;
@@ -61,6 +62,17 @@
 
 .para{
   position: relative;
-  z-index: 1000;
+  z-index: 1;
   color: aliceblue;
+  padding: 25px 5px;
+}
+
+
+.btn{
+  background-color: var(--main-color);
+  color: #ffff;
+}
+
+.btn a {
+  color: #fff;
 }

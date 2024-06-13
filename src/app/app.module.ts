@@ -8,6 +8,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { AboutComponent } from './components/about/about.component';
 import { ScrollAnimateDirective } from './scroll-animate.directive';
+import { SkillsComponent } from './components/skills/skills.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { ScrollAnimateDirective } from './scroll-animate.directive';
     NavbarComponent,
     BannerComponent,
     AboutComponent,
-    ScrollAnimateDirective
+    ScrollAnimateDirective,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CarouselModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
