@@ -11,6 +11,8 @@ import { ScrollAnimateDirective } from './scroll-animate.directive';
 import { SkillsComponent } from './components/skills/skills.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { ExperienceComponent } from './components/experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BannerComponent,
     AboutComponent,
     ScrollAnimateDirective,
-    SkillsComponent
+    SkillsComponent,
+    ProjectsComponent,
+    ExperienceComponent
   ],
   imports: [
     BrowserModule,

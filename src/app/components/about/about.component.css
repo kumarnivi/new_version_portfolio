@@ -1,4 +1,4 @@
-#about-section {
+#about {
   position: relative;
   background-image: url("../../../assets/images/aboutlap.avif");
   background-size: cover;
@@ -6,7 +6,7 @@
   background-position: center;
 }
 
-#about-section::before {
+#about::before {
   content: "";
   position: absolute;
   top: 0;
