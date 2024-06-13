@@ -1,0 +1,150 @@
+
+.home-section{
+    /* background-image: url('../../../assets/images/bgimg1.jpg'); */
+    /* background-color: black */
+}
+.img-box img {
+    width: 100%; 
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    object-fit: cover;
+    /* background: rgb(68 66 66 / 20%);
+    border-radius: 100%;
+    box-shadow: -2px 4px 13px 3px rgb(215 187 187 / 39%);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); */
+    /* border: 14px solid rgba(255, 255, 255, 0.3); */
+}
+
+
+
+.home-section
+{
+    position: relative;
+    /* background-color: var(--black-100); */
+    z-index: 1;
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+.header-social
+{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid rgba(240, 240, 240, 0.47);
+    border-radius: 50px;
+    padding-left: 0;
+    width: 250px;
+}
+.header-social li a 
+{
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    padding: 15px 15px;
+    color: rgba(237, 237, 237, 0.694);
+    transition: all 0.3s ease-out 0s;
+}
+.header-social li a:hover
+{
+    color: var(--main-color);
+}
+
+.text-row{
+    display: flex;
+    align-items: center;
+}
+
+.home-section .home-text,
+.home-section .home-image
+{
+ 
+    padding: 0 25px;
+    border-radius: 100%;
+}
+.home-section .home-text h4
+{
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: var(--main-color);
+}
+.home-section .home-text h1
+{
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 15px;
+    color: var(--black-900);
+}
+.home-section .home-text span
+{
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--black-900);
+    font-weight: 500;
+    display: block;
+    margin-top: 15px;
+}
+.home-section .home-text p
+{
+    font-size: 16px;
+    color: var(--black-400);
+    font-weight: 24px;
+    margin-top: 15px;
+}
+
+.home-section .home-image .img-box img
+{
+    position: relative;
+    width: 100%;
+    z-index: 789;
+}
+.header-hero-shape
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+}
+.header-hero-shape::before
+{
+    position: absolute;
+    content: '';
+    width: 1000%;
+    height: 100%;
+    background-color: var(--main-color);
+    transform: skewX(20deg);
+    top: 0;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* media screen */
+
+@media (max-width:767px) {
+    .text-row{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .header-social{
+        display: none;
+    }
+
+    .home-text{
+        display: flex;
+        justify-content: center;
+    }
+}
