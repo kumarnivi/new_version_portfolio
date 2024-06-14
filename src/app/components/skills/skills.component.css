@@ -71,12 +71,6 @@
   color: #ffff !important;
   }
 
-  .card-body h5:hover{
-    color: #ffff;
-  }
-
-
-
   .img_container img {
     object-fit: cover;
     border-radius: 10px;

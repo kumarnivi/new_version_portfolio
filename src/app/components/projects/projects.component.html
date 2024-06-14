@@ -1,3 +1,53 @@
 <section id="project">
+
+<div class="contaier">
+    <div class="row" id="project_row">
+        <div class="twelve">
+          <h1>Projects</h1>
+        </div>
+      </div>
+      <div class="row">
+        <h5>
+        dasdsfdgfh fdgfgfh
+      </h5></div>
+</div>
+  <div class="container">
+
     
+
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let card of cards">
+        <div class="card">
+          <div class="face face1">
+            <img [src]="card.image" height="100%" />
+          </div>
+          <div class="face face2">
+            <div class="content">
+              <h5>{{ card.heading }}</h5>
+              <p>{{ card.description }}</p>
+              <div class="row">
+                <div>
+                  <div class="div" style="display: flex">
+                    <a
+                      style="margin-right: 5px"
+                      *ngFor="let button of card.buttons"
+                      [href]="button.link"
+                      >{{ button.text }}</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="footer_content">
+                    <a style="border: none; "  [href]="card.link" target="_blank"> <img src="../../../assets/images/link _01.png" alt="">Live Prewiew</a>
+                    <a style="border: none;"  [href]="card.github" target="_blank"><img src="../../../assets/images/github.png" alt="">Soure Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

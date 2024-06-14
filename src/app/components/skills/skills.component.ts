@@ -67,7 +67,7 @@ export class SkillsComponent {
   @ViewChild('carousel', { static: false }) private carousel!: ElementRef;
 
  customOptions: OwlOptions = {
-   loop: false,
+   loop: true,
    mouseDrag: false,
    touchDrag: false,
    pullDrag: false,
@@ -90,11 +90,11 @@ export class SkillsComponent {
      }
    },
    nav: true,
-    // autoplayHoverPause: true,
-    // autoplay: true,
-    // autoplayTimeout: 3000,
-    // animateOut: 'fadeOut',
-    // animateIn: 'fadeIn'
+    autoplayHoverPause: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn'
  }
 
 }
