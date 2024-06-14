@@ -1,66 +1,109 @@
 <section id="experienced">
-    <div class="container">
-        <div class="row" id="skills_row">
-            <div class="twelve">
-              <h1>Experience</h1>
-            </div>
-          </div>
-    
-      <div class="row" id="accodtion_row">
-        <main>
-            <h1 class="head">Way Of Experience</h1>
-            <ul class="item-list">
-                <li class="item1">
-                    <input type="radio" name="point" id="slide1" checked>
-                    <label for="slide1" class="label">
-                        <h5 style="color: var(--main-color);"> Software Engineer (Intern) </h5>
-                        <h5>Aug-2023 to feb-2024</h5>
-                        <div class="slider ">
-                            <p>contributing to multiple projects while honing my MEAN
-                                Stack skills</p>
+  <div class="container">
+    <div class="row">
+      <div id="skills_row">
+        <div class="twelve">
+          <h1>Experience</h1>
+        </div>
+      </div>
+    </div>
 
-                        </div>
-                    </label>
-                </li>
-                <li class="item2">
-                    <input type="radio" name="point" id="slide2">
-                    <label for="slide2" class="label">
-                        <h5 style="color: var(--main-color);">UKi Codding School </h5>
-                        <h5>Nov-2023 to June-2024</h5>
-                        <div class="slider ">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi libero dolor harum non enim autem doloribus, nisi accusantium perspiciatis inventore pariatur error ducimus labore architecto tempora amet assumenda. Placeat in eaque explicabo sunt pariatur! Corporis laboriosam debitis sed eligendi quaerat!</p>
+    <div class="row" id="accodtion_row">
+      <h4 class="head">
+        My career path has been shaped by the wisdom gained from my experiences.
+      </h4>
+      <div
+        class="col-md-5"
+        id="experience_col"
+        style="display: flex; align-items: center; justify-content: center"
+      >
+        <div class="experience_img">
+          <img
+            src="../../../assets/images/experience.png"
+            alt="experience"
+            style="
+              height: 400px;
+              width: 100%;
+              object-fit: cover;
+              border-radius: 10px;
+            "
+          />
+        </div>
+      </div>
+      <div
+        class="col-md-7"
+        style="display: flex; align-items: center; justify-content: center"
+      >
+        <main style="width: 100%">
+          <ul class="item-list">
+            <li class="item1" *ngFor="let item of items; let i = index">
+              <input type="checkbox" name="point" id="slide{{ i }}" />
+              <label for="slide{{ i }}" class="label" (click)="toggle(i)">
+                <h5 style="color: var(--main-color)">{{ item.title }}</h5>
+                <h5
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                  "
+                >
+                  {{ item.date }}
+                  <div class="icon">
+                    <span *ngIf="!item.open"
+                      ><img src="../../../assets/images/chevron.png" alt=""
+                    /></span>
+                    <!-- Open icon (down arrow) -->
+                    <span *ngIf="item.open"
+                      ><img src="../../../assets/images/up-arrow.png" alt=""
+                    /></span>
+                    <!-- Close icon (up arrow) -->
+                  </div>
+                </h5>
 
-                        </div>
-                    </label>
-                </li>
-                <li class="item3">
-                    <input type="radio" name="point" id="slide3">
-                    <label for="slide3" class="label">
-                        <h5 style="color: var(--main-color);">Diploma in English</h5>
-                        <h5>Nov-2023 to June-2024</h5>
-                        <div class="slider ">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi libero dolor harum non enim autem doloribus, nisi accusantium perspiciatis inventore pariatur error ducimus labore architecto tempora amet assumenda. Placeat in eaque explicabo sunt pariatur! Corporis laboriosam debitis sed eligendi quaerat!</p>
+                <div class="slider" *ngIf="item.open">
+                  <div class="row">
+                    <div>
+                      <div
+                        style="
+                          display: flex;
+                          justify-content: space-between;
+                          align-items: center;
+                          padding: 10px 0;
+                          background-color: var(--main-bg);
+                          border-radius: 5px;
+                        "
+                      >
+                        <p style="margin-bottom: 0; padding: 5px">
+                          <img
+                            src="../../../assets/images/location.png"
+                            alt="location"
+                            style="margin-right: 10px"
+                          />{{ item.location }}
+                        </p>
 
-                        </div>
-                    </label>
-                </li>
-                <li class="item4">
-                    <input type="radio" name="point" id="slide4">
-                    <label for="slide4" class="label">
-                        <h4>
-                            Codewars and Cthulhu,<br>
-                            Strange bedfellows in the night,<br>
-                            Code warriors unite.</h4><span class="control"></span>
-                        <div class="slider ">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi libero dolor harum non enim autem doloribus, nisi accusantium perspiciatis inventore pariatur error ducimus labore architecto tempora amet assumenda. Placeat in eaque explicabo sunt pariatur! Corporis laboriosam debitis sed eligendi quaerat!</p>
-
-                        </div>
-                    </label>
-                </li>
-                
-            </ul>
+                        <p style="margin-bottom: 0; padding: 5px">
+                          <img
+                            src="../../../assets/images/link.png"
+                            alt="link"
+                            style="margin-right: 10px"
+                          />
+                          <a
+                            [href]="item.link"
+                            target="_blank"
+                            style="color: var(--main-color)"
+                            >{{ item.linkName }}</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <p>{{ item.description }}</p>
+                </div>
+              </label>
+            </li>
+          </ul>
         </main>
       </div>
     </div>
-   
+  </div>
 </section>

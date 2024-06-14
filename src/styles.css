@@ -8,6 +8,7 @@ html {
 }
 :root {
   --main-color: #930e66;
+  --main-bg:#d141a12b;
   --background-color:#2B0617;
   --shadow-black-100: 0 5px 15px rgba(0, 0, 0, 0.2);
   --black-900: #ffff;
