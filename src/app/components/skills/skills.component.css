@@ -27,7 +27,7 @@
     white-space: nowrap;
     padding-bottom: 13px;
     color: #ffff;
-    z-index: 1000;
+    z-index: 1;
   }
   .twelve h1:before {
     background-color: #930e66;

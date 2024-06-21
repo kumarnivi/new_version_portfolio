@@ -15,4 +15,7 @@ export class NavbarComponent {
     this.isScrolledd = window.pageXOffset > 0;
   }
 
+
+
+  
 }

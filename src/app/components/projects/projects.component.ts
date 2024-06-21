@@ -21,7 +21,7 @@ export class ProjectsComponent implements OnInit {
         ],
         link:"https://comrade1.onrender.com/",
         
-        github:'github',
+        github:'https://github.com/ananthvishnu/comrade',
         githubName:'githubName'
    
       },
@@ -74,7 +74,7 @@ export class ProjectsComponent implements OnInit {
         ],
         link:"https://tranquil-madeleine-c46a90.netlify.app/",
         
-        github:'github',
+        github:'https://github.com/kumarnivi/BookStore',
         githubName:'githubName'
     },
   ];
