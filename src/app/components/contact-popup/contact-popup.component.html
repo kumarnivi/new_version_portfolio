@@ -1,26 +1,89 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Send Message</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form
+          action=""
+          id="contactForm"
+          data-sb-form-api-token="API_TOKEN"
+          (ngSubmit)="onSubmit()"
+          [formGroup]="myForm"
+          #form="ngForm"
+        >
+          <div
+            class="row"
+            style="display: flex; align-items: center; justify-content: center"
+          >
+            <label for="firstName"> Name*</label> <br />
+            <input
+              style="text-align: center"
+              type="text"
+              name=""
+              id="firstName"
+              formControlName="toName"
+            />
+            <div class="invalid-feedback" data-sb-feedback="name:required">
+              A name is required.
+            </div>
+            <br />
 
-  <!-- Modal -->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Send Message</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <label for="firstName">First Name*</label> <br>
-          <input type="text" name="" id="firstName"> <br>
+            <label for="email">Email*</label> <br />
+            <input
+              type="email"
+              name=""
+              id="email"
+              formControlName="fromEmail"
+            />
+            
+            <br />
 
-          <label for="email">Email*</label> <br>
-          <input type="email" name="" id="email"> <br>
+            <label for="phoneno">Phone NO*</label> <br />
+            <input
+              type="number"
+              name=""
+              id="phoneno"
+              formControlName="phoneno"
+            />
+            <br />
 
-          <label for="message">Message*</label> <br>
-         <textarea name="" id="message" cols="30" rows="10"></textarea>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Send</button>
-        </div>
+            <label for="message">Message*</label> <br />
+            <textarea
+              name=""
+              id="message"
+              cols="30"
+              rows="10"
+              formControlName="message"
+            ></textarea>
+          </div>
+        </form>
+      </div>
+     
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="submit" class="btn btn-send">
+          Send
+        </button>
       </div>
     </div>
   </div>
+</div>

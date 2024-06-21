@@ -1,0 +1,34 @@
+@import '../../../styles.css';
+
+.btn-send{
+    background-color: var(--main-color);
+    color: #ffff;
+}
+
+.modal-body input {
+    height: 40px;
+    width: 440px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid var(--background-color);
+    margin-bottom: 20px;
+}
+
+.modal-body textarea {
+    width: 440px;
+    border-radius: 10px;
+    height: 120px;
+    text-align: center;
+    border: 1px solid var(--background-color);
+}
+
+label {
+    margin-left: 40px;
+}
+
+@media (max-width:420px) {
+    label {
+        margin-left: 0px;
+    }
+    
+}

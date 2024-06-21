@@ -16,6 +16,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactPopupComponent } from './components/contact-popup/contact-popup.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,11 @@ import { ContactPopupComponent } from './components/contact-popup/contact-popup.
     ReactiveFormsModule,
     NoopAnimationsModule,
     BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+    }) 
    
   ],
   providers: [],
