@@ -60,12 +60,21 @@ ul{
 	background-color: #ffffff;
 }
 
+.footer-row{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
 /*responsive*/
 @media(max-width: 767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
-}
+	.footer-row{
+		display: block;
+		text-align: center;
+	}
+	.name-div{
+		margin-bottom: 10px;
+	}
 }
 @media(max-width: 574px){
   .footer-col{
