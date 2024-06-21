@@ -98,3 +98,10 @@ backdrop-filter: blur(5px);
     background-size: 0 3px, 100% 3px;
   }
   
+
+  @media (max-width:1171px) {
+    .nav{
+        display: none;
+    }
+    
+  }
