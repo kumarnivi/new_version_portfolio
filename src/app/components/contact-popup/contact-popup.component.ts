@@ -85,6 +85,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import emailjs from 'emailjs-com';
+import { Modal } from 'bootstrap';
 
 @Component({
   selector: 'app-contact-popup',
@@ -96,6 +97,7 @@ export class ContactPopupComponent implements OnInit  {
   // myForm: FormGroup | any;
 
 
+  @ViewChild('staticBackdrop', { static: false }) staticBackdrop: ElementRef | undefined;
 
   constructor(private toastr: ToastrService, private fb: FormBuilder) {
     
@@ -148,6 +150,15 @@ get message() {
           this.toastr.success('SUCCESS!');
           console.log('SUCCESS!', response.status, response.text);
           this.myForm.reset();
+          // Close the modal
+          const modal = Modal.getInstance(this.staticBackdrop?.nativeElement);
+          modal?.hide();
+          // Remove blur effect
+          const backdrop = document.querySelector('.modal-backdrop');
+          if (backdrop) {
+            backdrop.classList.remove('modal-backdrop', 'show');
+          };
+          location.reload()
         }, (err: any) => {
           console.log('FAILED...', err);
         });
